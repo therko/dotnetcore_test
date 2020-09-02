@@ -10,12 +10,17 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/QuickStart.Tests/bin/Debug/netcoreapp3.1/QuickStart.Tests.dll",
+            "program": "${workspaceFolder}/QuickStart/bin/Debug/netcoreapp3.1/QuickStart.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/QuickStart.Tests",
+            "cwd": "${workspaceFolder}/QuickStart",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/weatherforecast"
+              }
         },
         {
             "name": ".NET Core Attach",
