@@ -1,0 +1,19 @@
+//https://medium.com/imaginelearning/asp-net-core-3-1-microservice-quick-start-c0c2f4d6c7fa
+
+//.NET Core CLI
+
+dotnet new sln -n QuickStart
+
+dotnet new webapi -n QuickStart
+
+dotnet sln QuickStart.sln add ./QuickStart/QuickStart.csproj
+
+dotnet new xunit -n QuickStart.Tests
+
+dotnet sln QuickStart.sln add ./QuickStart.Tests/QuickStart.Tests.csproj
+
+dotnet build
+dotnet test
+
+
+dotnet new gitignore
