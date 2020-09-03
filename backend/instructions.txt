@@ -17,3 +17,12 @@ dotnet test
 
 
 dotnet new gitignore
+
+
+dotnet add package Microsoft.AspNetCore.Mvc.Testing
+dotnet restore
+
+
+dotnet watch run
+
+dotnet test
